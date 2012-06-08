@@ -1,0 +1,76 @@
+#marvelc system.prop
+
+ro.ril.oem.ecclist=911
+ro.ril.set.mtusize=1472
+ro.com.google.clientidbase=android-htc
+ro.com.google.clientidbase.yt=android-virgin-us
+ro.com.google.clientidbase.am=android-virgin-us
+ro.com.google.clientidbase.vs=android-htc
+ro.com.google.clientidbase.gmm=android-htc
+ro.com.google.clientidbase.ms=android-virgin-us
+ro.product.model=HTC_A510c
+ro.cdma.home.operator.alpha=Virgin Mobile
+gsm.sim.operator.alpha=Virgin Mobile
+gsm.operator.alpha=Virgin Mobile
+ro.cdma.home.operator.numeric=311490
+gsm.sim.operator.numeric=311490
+gsm.operator.numeric=311490
+gsm.sim.operator.iso-country=us
+gsm.operator.iso-country=us
+ro.da1.enable=true
+
+wifi.interface = eth0
+wifi.supplicant_scan_interval = 100
+
+ro.sf.lcd_density = 160
+ro.com.google.locationfeatures= 1
+
+# The OpenGL ES API level that is natively supported by this device.
+# This is a 16.16 fixed point number
+ro.opengles.version = 131072
+
+# View configuration for QVGA
+view.fading_edge_length = 8
+view.touch_slop = 15
+view.minimum_fling_velocity = 25
+view.scroll_friction = 0.008
+
+ro.ril.disable.power.collapse = 1
+ro.ril.avoid.pdp.overlap = 1
+ro.ril.hsxpa=1 
+ro.ril.gprsclass=10 
+ro.ril.hep=1 
+ro.ril.enable.dtm=0 
+ro.ril.hsdpa.category=8
+ro.ril.enable.a53=1 
+ro.ril.enable.3g.prefix=1 
+ro.ril.htcmaskw1.bitmask=4294967295 
+ro.ril.htcmaskw1=14449 
+ro.ril.hsupa.category=6
+ro.ril.hep = 1
+ro.ril.hsdpa.category = 8
+rild.libpath=/system/lib/libhtc_ril.so
+ro.telephony.default_network = 4
+ro.ril.def.agps.mode = 1
+ro.ril.enable.amr.wideband = 1
+
+# For no auto focus devices
+ro.workaround.noautofocus = 1
+
+# Release Bluetooth HW/SW information
+ro.bt.chipset	= Broadcom BCM4329-B1
+ro.bt.version	= Bluetooth 2.1 + EDR
+ro.bt.stack	= Broadcom BTL-A
+ro.bt.stack.version	= 2.2.017
+#0x10000010010100100000011 represent bt profile list
+ro.bt.profiles	= 4270339
+
+# Properties of BTLA stack
+service.brcm.bt.activation = 0
+service.brcm.bt.srv_active = 0
+service.brcm.bt.hcid_active = 0
+service.brcm.bt.avrcp_pass_thru = 0
+service.brcm.bt.avrcp_toggle = 1
+
+# update the acoustic table for Buzz NEL lab testing
+ro.ril.update.acoustic.table = 1
