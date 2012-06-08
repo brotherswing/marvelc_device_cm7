@@ -105,13 +105,13 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x09600000
 BOARD_FLASH_BLOCK_SIZE := 262144
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
-TARGET_PREBUILT_KERNEL := device/htc/marvelc/prebuilt/kernel
-LOCAL_KERNEL := device/htc/marvelc/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := device/htc/marvelc/prebuilt/zImage
+LOCAL_KERNEL := device/htc/marvelc/prebuilt/zImage
 
 #BOARD_CAMERA_USE_GETBUFFERINFO := true
 #TARGET_SPECIFIC_HEADER_PATH := device/htc/marvelc/include
 
-#TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/marvelc/prebuilt/recovery_kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/marvelc/prebuilt/zImage
 #BOARD_USES_RECOVERY_CHARGEMODE := true
 TARGET_RECOVERY_INITRC := device/htc/marvelc/init.recovery.rc
 BOARD_HAS_NO_SELECT_BUTTON := true

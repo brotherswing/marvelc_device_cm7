@@ -1,0 +1,14 @@
+--- simonsimons34 --- Sick Programming --- Team BlueRidge ---
+
+Device tree for AOSP  HTC Marvelc
+
+To build, you must patch the vendor folders and run extract-files.sh on a marvelc running CM7. I can only fix so much, be running a more or less bugless ROM.
+
+To build run
+
+. build/envsetup.sh
+lunch
+choose cyanogen_marvelc-eng
+make -jx bacon
+
+*x = the number of threads your processor has (threads not cores)
