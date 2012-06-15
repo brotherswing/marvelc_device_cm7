@@ -92,10 +92,17 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt Modules
 PRODUCT_COPY_FILES += \
-    device/htc/marvelc/prebuilt/bcm4329.ko:system/lib/modules/bcm4329.ko \
-    device/htc/marvelc/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
-    device/htc/marvelc/firmware/fw_bcm4329.bin:system/etc/firmware/fw_bcm4329.bin \
-    device/htc/marvelc/firmware/fw_bcm4329_apsta.bin:system/etc/firmware/fw_bcm4329_apsta.bin
+    device/htc/marvelc/prebuilt/bcm4329.ko:/system/lib/modules/bcm4329.ko \
+    device/htc/marvelc/prebuilt/hostap.ko:/system/lib/modules/hostap.ko \
+    device/htc/marvelc/prebuilt/lib80211.ko:/system/lib/modules/lib80211.ko \
+    device/htc/marvelc/prebuilt/lib80211_crypt_ccmp.ko:/system/lib/modules/lib80211_crypt_ccmp.ko \
+    device/htc/marvelc/prebuilt/lib80211_crypt_tkip.ko:/system/lib/modules/lib80211_crypt_tkip.ko \
+    device/htc/marvelc/prebuilt/lib80211_crypt_wep.ko:/system/lib/modules/lib80211_crypt_wep.ko \
+    device/htc/marvelc/prebuilt/michael_mic.ko:/system/lib/modules/michael_mic.ko \
+    device/htc/marvelc/prebuilt/ssb.ko:/system/lib/modules/ssb.ko \
+    device/htc/marvelc/firmware/bcm4329.hcd:/system/etc/firmware/bcm4329.hcd \
+    device/htc/marvelc/firmware/fw_bcm4329.bin:/system/etc/firmware/fw_bcm4329.bin \
+    device/htc/marvelc/firmware/fw_bcm4329_apsta.bin:/system/etc/firmware/fw_bcm4329_apsta.bin
 
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/marvelc/media_a1026.mk)
