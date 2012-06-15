@@ -87,32 +87,16 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := marvelc
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 20000
 BOARD_USES_QCOM_LIBRPC := true
 
-# # cat /proc/mtd (marvelc)
-#dev:    size   erasesize  name
-#mtd0: 00100000 00040000 "misc"
-#mtd1: 00500000 00040000 "recovery"
-#mtd2: 00340000 00040000 "boot"
-#mtd3: 10400000 00040000 "system"
-#mtd4: 02300000 00040000 "cache"
-#mtd5: 09600000 00040000 "userdata"
-#mtd6: 00a00000 00040000 "devlog"
-
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00340000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00500000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x10400000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x106c0000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x09600000
-
-BOARD_FLASH_BLOCK_SIZE := 262144
+BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/marvelc/prebuilt/zImage
 LOCAL_KERNEL := device/htc/marvelc/prebuilt/zImage
+BOARD_CUSTOM_GRAPHICS := ../../../device/htc/marvelc/recovery/graphics.c
+TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/marvelc/recovery/zImage
+TARGET_RECOVERY_INITRC := device/htc/marvelc/recovery/init.recovery.rc
 
-#BOARD_CAMERA_USE_GETBUFFERINFO := true
-#TARGET_SPECIFIC_HEADER_PATH := device/htc/marvelc/include
-
-TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/marvelc/prebuilt/zImage
-#BOARD_USES_RECOVERY_CHARGEMODE := true
-TARGET_RECOVERY_INITRC := device/htc/marvelc/init.recovery.rc
-BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_CUSTOM_GRAPHICS              := ../../../device/htc/marvelc/recovery/graphics.c

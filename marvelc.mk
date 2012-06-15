@@ -82,7 +82,7 @@ PRODUCT_COPY_FILES += \
 # Kernel modules
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/htc/marvelc/prebuilt/kernel
+LOCAL_KERNEL := device/htc/marvelc/prebuilt/zImage
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
