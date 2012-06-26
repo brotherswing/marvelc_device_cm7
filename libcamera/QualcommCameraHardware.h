@@ -634,6 +634,6 @@ private:
     int previewWidth, previewHeight;
 };
 
-}; // namespace android
+};
 
 #endif

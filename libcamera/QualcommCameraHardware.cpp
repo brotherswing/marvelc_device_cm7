@@ -4773,4 +4773,4 @@ status_t QualcommCameraHardware::getBufferInfo(sp<IMemory>& Frame, size_t *align
     return ret;
 }
 
-}; // namespace android
+};

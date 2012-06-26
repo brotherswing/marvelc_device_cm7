@@ -28,7 +28,7 @@ JS_ENGINE:=v8
 BOARD_USE_FROYO_LIBCAMERA := true
 
 # inherit from the proprietary version
--include vendor/htc/marvelc/BoardConfigVendor.mk
+-include vendor/htc/marvel/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
@@ -40,7 +40,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_CPU_ABI := armeabi-v6l
 TARGET_CPU_ABI2 := armeabi
 
-TARGET_BOOTLOADER_BOARD_NAME := marvelc
+TARGET_BOOTLOADER_BOARD_NAME := marvel
 
 TARGET_PROVIDES_INIT_TARGET_RC := true
 
@@ -72,7 +72,7 @@ BOARD_VENDOR_QCOM_AMSS_VERSION := 4735
 
 BOARD_VENDOR_USE_AKMD := akm8975
 
-BOARD_EGL_CFG := device/htc/marvelc/egl.cfg
+BOARD_EGL_CFG := device/htc/marvel/egl.cfg
 
 BOARD_USES_QCOM_LIBS := true
 
@@ -83,20 +83,36 @@ BOARD_USE_NEW_LIBRIL_HTC := true
 BOARD_NO_RGBX_8888 := true
 
 BOARD_USES_QCOM_GPS := true
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := marvelc
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := marvel
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 20000
 BOARD_USES_QCOM_LIBRPC := true
 
+# # cat /proc/mtd (marvel)
+#dev:    size   erasesize  name
+#mtd0: 00100000 00040000 "misc"
+#mtd1: 00500000 00040000 "recovery"
+#mtd2: 00340000 00040000 "boot"
+#mtd3: 10400000 00040000 "system"
+#mtd4: 02300000 00040000 "cache"
+#mtd5: 09600000 00040000 "userdata"
+#mtd6: 00a00000 00040000 "devlog"
+
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00340000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00500000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x106c0000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x10400000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x09600000
-BOARD_FLASH_BLOCK_SIZE := 131072
+
+BOARD_FLASH_BLOCK_SIZE := 262144
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
-TARGET_PREBUILT_KERNEL := device/htc/marvelc/prebuilt/zImage
-LOCAL_KERNEL := device/htc/marvelc/prebuilt/zImage
-BOARD_CUSTOM_GRAPHICS := ../../../device/htc/marvelc/recovery/graphics.c
-TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/marvelc/recovery/zImage
-TARGET_RECOVERY_INITRC := device/htc/marvelc/recovery/init.recovery.rc
+TARGET_PREBUILT_KERNEL := device/htc/marvel/prebuilt/kernel
+LOCAL_KERNEL := device/htc/marvel/prebuilt/kernel
 
+#BOARD_CAMERA_USE_GETBUFFERINFO := true
+#TARGET_SPECIFIC_HEADER_PATH := device/htc/marvel/include
+
+#TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/marvel/prebuilt/recovery_kernel
+#BOARD_USES_RECOVERY_CHARGEMODE := true
+TARGET_RECOVERY_INITRC := device/htc/marvel/init.recovery.rc
+BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_CUSTOM_GRAPHICS              := ../../../device/htc/marvel/recovery/graphics.c

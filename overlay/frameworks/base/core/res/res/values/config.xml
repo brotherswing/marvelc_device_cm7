@@ -114,7 +114,6 @@
     <integer name="config_defaultNotificationLedOff">9000</integer>
 
     <!-- Component name of the service providing network location support. -->
-   <!-- Component name of the service providing network location support. -->
     <string name="config_networkLocationProvider">com.google.android.location.NetworkLocationProvider</string>
 
     <!-- Component name of the service providing geocoder API support. -->
@@ -161,29 +160,7 @@ tethering on a new interface called "foo2" add <item>"foo\\d"</item> to the arra
 
 
     <!-- Gimmie CRT animations -->
-    <bool name="config_animateScreenLights">true</bool>
-<string-array translatable="false" name="networkAttributes">
-        <item>"wifi,1,1,1"</item>
-        <item>"mobile,0,0,0"</item>
-        <item>"mobile_mms,2,0,2"</item>
-        <item>"mobile_supl,3,0,2"</item>
-        <item>"mobile_dun,4,0,4"</item>
-        <item>"mobile_hipri,5,0,3"</item>
-    </string-array>
-
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         USB interfaces.  If the device doesn't want to support tething over USB this should
-         be empty.  An example would be "usb.*" -->
-    <string-array translatable="false" name="config_tether_usb_regexs">
-        <item>"usb0"</item>
-    </string-array>
-
-    <!-- Regex array of allowable upstream ifaces for tethering - for example if you want
-         tethering on a new interface called "foo2" add <item>"foo\\d"</item> to the array -->
-    <string-array translatable="false" name="config_tether_upstream_regexs">
-        <item>"rmnet\\d"</item>
-        <item>"wlan0\\d"</item>
-    </string-array>
+    <bool name="config_animateScreenLights">false</bool>
 
     <!-- Boolean indicating if we require the use of DUN on mobile for tethering -->
     <bool translatable="false" name="config_tether_dun_required">false</bool>

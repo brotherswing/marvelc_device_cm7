@@ -246,7 +246,7 @@ static int set_light_battery (struct light_device_t* dev,
 
 static int set_light_attention (struct light_device_t* dev,
 		struct light_state_t const* state) {
-	/* marvel has no attention */
+	/* marvelc has no attention */
 
 	return 0;
 }
@@ -317,7 +317,7 @@ const struct hw_module_t HAL_MODULE_INFO_SYM = {
 	.version_major = 2,
 	.version_minor = 0,
 	.id = LIGHTS_HARDWARE_MODULE_ID,
-	.name = "Marvel lights module",
+	.name = "Marvelc lights module",
 	.author = "Diogo Ferreira <diogo@underdev.org>",
 	.methods = &lights_module_methods,
 };

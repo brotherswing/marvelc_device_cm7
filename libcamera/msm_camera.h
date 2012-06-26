@@ -1,5 +1,3 @@
-
-
 #ifndef __LINUX_MSM_CAMERA_H
 #define __LINUX_MSM_CAMERA_H
 
@@ -540,4 +538,4 @@ struct msm_camsensor_info {
 	uint8_t flash_enabled;
 	int8_t total_steps;
 };
-#endif /* __LINUX_MSM_CAMERA_H */
+#endif
